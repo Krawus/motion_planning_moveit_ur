@@ -1,3 +1,0 @@
-bash start_ursim.sh -m ur5e     -- run UR5e sim in browser
-
-
