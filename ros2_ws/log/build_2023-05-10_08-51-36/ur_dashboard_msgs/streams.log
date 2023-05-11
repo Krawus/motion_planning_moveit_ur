@@ -1,0 +1,641 @@
+[0.039s] Invoking command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/MAPR-project/ros2_ws/src/Universal_Robots_ROS2_Driver/ur_dashboard_msgs -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs
+[0.145s] -- The C compiler identification is GNU 11.3.0
+[0.205s] -- The CXX compiler identification is GNU 11.3.0
+[0.224s] -- Detecting C compiler ABI info
+[0.294s] -- Detecting C compiler ABI info - done
+[0.303s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.303s] -- Detecting C compile features
+[0.304s] -- Detecting C compile features - done
+[0.313s] -- Detecting CXX compiler ABI info
+[0.491s] -- Detecting CXX compiler ABI info - done
+[0.501s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.501s] -- Detecting CXX compile features
+[0.502s] -- Detecting CXX compile features - done
+[0.508s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.768s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.891s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.896s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.915s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.981s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.048s] -- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)
+[1.682s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.932s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.328s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.358s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+[2.362s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.393s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+[2.393s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.393s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.393s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.421s] -- Found PythonExtra: .so  
+[2.494s] -- Configuring done
+[2.595s] -- Generating done
+[2.598s] -- Build files have been written to: /home/MAPR-project/ros2_ws/build/ur_dashboard_msgs
+[2.605s] Invoked command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/MAPR-project/ros2_ws/src/Universal_Robots_ROS2_Driver/ur_dashboard_msgs -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs
+[2.607s] Invoking command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/MAPR-project/ros2_ws/build/ur_dashboard_msgs -- -j8 -l8
+[2.667s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.680s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.688s] [  1%] Built target ament_cmake_python_copy_ur_dashboard_msgs
+[3.171s] running egg_info
+[3.171s] creating ur_dashboard_msgs.egg-info
+[3.172s] writing ur_dashboard_msgs.egg-info/PKG-INFO
+[3.172s] writing dependency_links to ur_dashboard_msgs.egg-info/dependency_links.txt
+[3.172s] writing top-level names to ur_dashboard_msgs.egg-info/top_level.txt
+[3.173s] writing manifest file 'ur_dashboard_msgs.egg-info/SOURCES.txt'
+[3.177s] reading manifest file 'ur_dashboard_msgs.egg-info/SOURCES.txt'
+[3.177s] writing manifest file 'ur_dashboard_msgs.egg-info/SOURCES.txt'
+[3.211s] [  1%] Built target ament_cmake_python_build_ur_dashboard_msgs_egg
+[4.771s] [  1%] Built target ur_dashboard_msgs__cpp
+[4.787s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.788s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.789s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.094s] [  4%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/msg/detail/program_state__functions.c.o[0m
+[5.094s] [  6%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/msg/detail/robot_mode__functions.c.o[0m
+[5.094s] [  6%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/add_to_log__functions.c.o[0m
+[5.094s] [  6%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/msg/detail/safety_mode__functions.c.o[0m
+[5.096s] [  6%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/get_loaded_program__functions.c.o[0m
+[5.317s] [  7%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/get_program_state__functions.c.o[0m
+[5.352s] [  8%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/get_robot_mode__functions.c.o[0m
+[5.359s] [  9%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/get_safety_mode__functions.c.o[0m
+[5.433s] [  9%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/is_program_running__functions.c.o[0m
+[5.467s] [ 10%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/is_program_saved__functions.c.o[0m
+[5.611s] [ 11%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/load__functions.c.o[0m
+[5.701s] [ 12%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/popup__functions.c.o[0m
+[5.728s] [ 13%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/action/detail/set_mode__functions.c.o[0m
+[5.746s] [ 13%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_c.dir/rosidl_generator_c/ur_dashboard_msgs/srv/detail/raw_request__functions.c.o[0m
+[6.409s] [ 14%] [32m[1mLinking C shared library libur_dashboard_msgs__rosidl_generator_c.so[0m
+[6.472s] [ 14%] Built target ur_dashboard_msgs__rosidl_generator_c
+[6.487s] [ 15%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.489s] [ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[6.490s] [ 17%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[6.891s] [ 18%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/msg/robot_mode__type_support.cpp.o[0m
+[6.891s] [ 19%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/msg/program_state__type_support.cpp.o[0m
+[6.891s] [ 19%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/msg/safety_mode__type_support.cpp.o[0m
+[7.552s] [ 20%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/add_to_log__type_support.cpp.o[0m
+[7.592s] [ 21%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/get_loaded_program__type_support.cpp.o[0m
+[7.592s] [ 21%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/get_program_state__type_support.cpp.o[0m
+[8.120s] [ 22%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/msg/detail/program_state__type_support.cpp.o[0m
+[8.165s] [ 23%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/get_robot_mode__type_support.cpp.o[0m
+[8.223s] [ 24%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/get_safety_mode__type_support.cpp.o[0m
+[8.301s] [ 25%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/is_program_running__type_support.cpp.o[0m
+[8.541s] [ 26%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/msg/detail/dds_fastrtps/program_state__type_support.cpp.o[0m
+[8.820s] [ 26%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/msg/program_state__type_support.cpp.o[0m
+[8.849s] [ 26%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/is_program_saved__type_support.cpp.o[0m
+[8.978s] [ 27%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/msg/robot_mode__type_support.cpp.o[0m
+[8.981s] [ 28%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/load__type_support.cpp.o[0m
+[9.050s] [ 29%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/popup__type_support.cpp.o[0m
+[9.089s] [ 30%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/msg/safety_mode__type_support.cpp.o[0m
+[9.172s] [ 31%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/add_to_log__type_support.cpp.o[0m
+[9.193s] [ 32%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/msg/detail/robot_mode__type_support.cpp.o[0m
+[9.322s] [ 32%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/get_loaded_program__type_support.cpp.o[0m
+[9.396s] [ 33%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/get_program_state__type_support.cpp.o[0m
+[9.507s] [ 34%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/msg/detail/dds_fastrtps/robot_mode__type_support.cpp.o[0m
+[9.515s] [ 35%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/get_robot_mode__type_support.cpp.o[0m
+[9.577s] [ 36%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/srv/raw_request__type_support.cpp.o[0m
+[9.646s] [ 37%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/get_safety_mode__type_support.cpp.o[0m
+[9.681s] [ 37%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ur_dashboard_msgs/action/set_mode__type_support.cpp.o[0m
+[9.730s] [ 37%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/is_program_running__type_support.cpp.o[0m
+[9.823s] [ 38%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/is_program_saved__type_support.cpp.o[0m
+[9.924s] [ 39%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/load__type_support.cpp.o[0m
+[9.933s] [ 40%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/popup__type_support.cpp.o[0m
+[10.026s] [ 40%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/srv/raw_request__type_support.cpp.o[0m
+[10.071s] [ 41%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/msg/detail/program_state__type_support.c.o[0m
+[10.108s] [ 42%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/ur_dashboard_msgs/action/set_mode__type_support.cpp.o[0m
+[10.142s] [ 43%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/msg/detail/robot_mode__type_support.c.o[0m
+[10.146s] [ 44%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/msg/detail/safety_mode__type_support.cpp.o[0m
+[10.192s] [ 45%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/msg/detail/program_state__type_support_c.cpp.o[0m
+[10.227s] [ 45%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/msg/detail/safety_mode__type_support.c.o[0m
+[10.262s] [ 46%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/add_to_log__type_support.c.o[0m
+[10.265s] [ 47%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support.c.o[0m
+[10.328s] [ 48%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/get_program_state__type_support.c.o[0m
+[10.372s] [ 49%] [32m[1mLinking CXX shared library libur_dashboard_msgs__rosidl_typesupport_c.so[0m
+[10.412s] [ 49%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support.c.o[0m
+[10.422s] [ 50%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support.c.o[0m
+[10.450s] [ 51%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/is_program_running__type_support.c.o[0m
+[10.567s] [ 52%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/load__type_support.c.o[0m
+[10.572s] [ 52%] Built target ur_dashboard_msgs__rosidl_typesupport_c
+[10.580s] [ 52%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/is_program_saved__type_support.c.o[0m
+[10.588s] [ 52%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/msg/detail/dds_fastrtps/safety_mode__type_support.cpp.o[0m
+[10.602s] [ 52%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/msg/detail/robot_mode__type_support_c.cpp.o[0m
+[10.630s] [ 53%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/popup__type_support.c.o[0m
+[10.712s] [ 54%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/srv/detail/raw_request__type_support.c.o[0m
+[10.732s] [ 54%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ur_dashboard_msgs/action/detail/set_mode__type_support.c.o[0m
+[10.815s] [ 55%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/msg/detail/safety_mode__type_support_c.cpp.o[0m
+[10.826s] [ 56%] [32m[1mLinking CXX shared library libur_dashboard_msgs__rosidl_typesupport_cpp.so[0m
+[10.916s] [ 57%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/add_to_log__type_support.cpp.o[0m
+[10.951s] [ 57%] Built target ur_dashboard_msgs__rosidl_typesupport_cpp
+[11.012s] [ 58%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/get_loaded_program__type_support.cpp.o[0m
+[11.038s] [ 59%] [32m[1mLinking C shared library libur_dashboard_msgs__rosidl_typesupport_introspection_c.so[0m
+[11.181s] [ 59%] Built target ur_dashboard_msgs__rosidl_typesupport_introspection_c
+[11.202s] [ 60%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/get_program_state__type_support.cpp.o[0m
+[11.306s] [ 60%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/add_to_log__type_support.cpp.o[0m
+[11.364s] [ 61%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/add_to_log__type_support_c.cpp.o[0m
+[11.637s] [ 62%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support_c.cpp.o[0m
+[11.813s] [ 62%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/get_program_state__type_support_c.cpp.o[0m
+[11.840s] [ 62%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/get_robot_mode__type_support.cpp.o[0m
+[12.107s] [ 63%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/get_safety_mode__type_support.cpp.o[0m
+[12.381s] [ 64%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/is_program_running__type_support.cpp.o[0m
+[12.575s] [ 65%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support.cpp.o[0m
+[12.644s] [ 66%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/is_program_saved__type_support.cpp.o[0m
+[12.768s] [ 67%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support_c.cpp.o[0m
+[12.815s] [ 68%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support_c.cpp.o[0m
+[13.107s] [ 69%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/is_program_running__type_support_c.cpp.o[0m
+[13.258s] [ 69%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/load__type_support.cpp.o[0m
+[13.297s] [ 70%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/popup__type_support.cpp.o[0m
+[13.695s] [ 71%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/srv/detail/dds_fastrtps/raw_request__type_support.cpp.o[0m
+[13.797s] [ 71%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/is_program_saved__type_support_c.cpp.o[0m
+[13.978s] [ 72%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/get_program_state__type_support.cpp.o[0m
+[14.006s] [ 73%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ur_dashboard_msgs/action/detail/dds_fastrtps/set_mode__type_support.cpp.o[0m
+[14.066s] [ 74%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/load__type_support_c.cpp.o[0m
+[14.549s] [ 75%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/popup__type_support_c.cpp.o[0m
+[15.054s] [ 76%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/srv/detail/raw_request__type_support_c.cpp.o[0m
+[15.161s] [ 76%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ur_dashboard_msgs/action/detail/set_mode__type_support_c.cpp.o[0m
+[15.202s] [ 77%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support.cpp.o[0m
+[15.241s] [ 77%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support.cpp.o[0m
+[15.338s] [ 78%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/is_program_running__type_support.cpp.o[0m
+[15.388s] [ 79%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/is_program_saved__type_support.cpp.o[0m
+[15.677s] [ 80%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/load__type_support.cpp.o[0m
+[15.783s] [ 80%] [32m[1mLinking CXX shared library libur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.110s] [ 80%] Built target ur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp
+[16.195s] [ 80%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/popup__type_support.cpp.o[0m
+[16.279s] [ 81%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/srv/detail/raw_request__type_support.cpp.o[0m
+[16.313s] [ 82%] [32mBuilding CXX object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ur_dashboard_msgs/action/detail/set_mode__type_support.cpp.o[0m
+[16.686s] [ 83%] [32m[1mLinking CXX shared library libur_dashboard_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[16.849s] [ 83%] Built target ur_dashboard_msgs__rosidl_typesupport_fastrtps_c
+[17.371s] [ 84%] [32m[1mLinking CXX shared library libur_dashboard_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[17.460s] [ 84%] Built target ur_dashboard_msgs__rosidl_typesupport_introspection_cpp
+[17.482s] [ 84%] Built target ur_dashboard_msgs
+[17.504s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[20.582s] [ 85%] Built target ur_dashboard_msgs__py
+[20.611s] [ 86%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/msg/_robot_mode_s.c.o[0m
+[20.611s] [ 87%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_add_to_log_s.c.o[0m
+[20.611s] [ 87%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_get_program_state_s.c.o[0m
+[20.612s] [ 86%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/msg/_program_state_s.c.o[0m
+[20.613s] [ 88%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_get_loaded_program_s.c.o[0m
+[20.613s] [ 89%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/msg/_safety_mode_s.c.o[0m
+[20.613s] [ 90%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_get_robot_mode_s.c.o[0m
+[20.614s] [ 91%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_get_safety_mode_s.c.o[0m
+[20.942s] [ 91%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_is_program_saved_s.c.o[0m
+[20.950s] [ 92%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_load_s.c.o[0m
+[20.950s] [ 93%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_is_program_running_s.c.o[0m
+[20.997s] [ 94%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_popup_s.c.o[0m
+[20.998s] [ 94%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/srv/_raw_request_s.c.o[0m
+[21.002s] [ 95%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_generator_py.dir/rosidl_generator_py/ur_dashboard_msgs/action/_set_mode_s.c.o[0m
+[21.452s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/ur_dashboard_msgs/libur_dashboard_msgs__rosidl_generator_py.so[0m
+[21.504s] [ 96%] Built target ur_dashboard_msgs__rosidl_generator_py
+[21.529s] [ 98%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[21.530s] [ 98%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[21.531s] [ 99%] [32mBuilding C object CMakeFiles/ur_dashboard_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[22.193s] [ 99%] [32m[1mLinking C shared library rosidl_generator_py/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[22.196s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[22.200s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[22.262s] [100%] Built target ur_dashboard_msgs__rosidl_typesupport_fastrtps_c__pyext
+[22.262s] [100%] Built target ur_dashboard_msgs__rosidl_typesupport_introspection_c__pyext
+[22.267s] [100%] Built target ur_dashboard_msgs__rosidl_typesupport_c__pyext
+[22.284s] Invoked command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/MAPR-project/ros2_ws/build/ur_dashboard_msgs -- -j8 -l8
+[22.693s] Invoking command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/MAPR-project/ros2_ws/build/ur_dashboard_msgs
+[22.702s] -- Install configuration: "Release"
+[22.702s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ament_index/resource_index/rosidl_interfaces/ur_dashboard_msgs
+[22.702s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.702s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.702s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/add_to_log.h
+[22.702s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/is_program_saved.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/load.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_safety_mode.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/is_program_running.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_loaded_program.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_program_state.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support.h
+[22.703s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__struct.h
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__struct.h
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support.h
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__functions.c
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__struct.h
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__functions.h
+[22.704s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__struct.h
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__functions.c
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__struct.h
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__functions.h
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__functions.c
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__struct.h
+[22.705s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__functions.c
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__type_support.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__functions.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__type_support.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__struct.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__functions.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__functions.h
+[22.706s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__functions.c
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__type_support.h
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__functions.h
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__type_support.h
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__functions.c
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__functions.h
+[22.707s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__type_support.h
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__struct.h
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__type_support.h
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support.h
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__type_support.h
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__functions.c
+[22.708s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__struct.h
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__functions.h
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__functions.h
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__functions.c
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__functions.c
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__struct.h
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__functions.c
+[22.709s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__functions.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/raw_request.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/popup.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_robot_mode.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/rosidl_generator_c__visibility_control.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/program_state.h
+[22.710s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__functions.c
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__functions.h
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__struct.h
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__functions.c
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__type_support.h
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__struct.h
+[22.711s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__struct.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__functions.c
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__type_support.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__functions.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__type_support.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__functions.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/safety_mode.h
+[22.712s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/robot_mode.h
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/set_mode.h
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__type_support.h
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__struct.h
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__functions.c
+[22.713s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__functions.h
+[22.714s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/library_path.sh
+[22.714s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/library_path.dsv
+[22.714s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_generator_c.so
+[22.715s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_generator_c.so" to ""
+[22.715s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.715s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.715s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.715s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__rosidl_typesupport_fastrtps_c.h
+[22.715s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__rosidl_typesupport_fastrtps_c.h
+[22.715s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__rosidl_typesupport_fastrtps_c.h
+[22.716s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__rosidl_typesupport_fastrtps_c.h
+[22.717s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__rosidl_typesupport_fastrtps_c.h
+[22.717s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.717s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[22.717s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.717s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__rosidl_typesupport_fastrtps_c.h
+[22.717s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__rosidl_typesupport_fastrtps_c.h
+[22.717s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__rosidl_typesupport_fastrtps_c.h
+[22.717s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.717s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.718s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+[22.718s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_fastrtps_c.so
+[22.718s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[22.719s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.719s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.719s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__rosidl_typesupport_introspection_c.h
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__type_support.c
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__type_support.c
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__rosidl_typesupport_introspection_c.h
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__type_support.c
+[22.719s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__rosidl_typesupport_introspection_c.h
+[22.720s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__type_support.c
+[22.720s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__rosidl_typesupport_introspection_c.h
+[22.720s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__type_support.c
+[22.720s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support.c
+[22.720s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__rosidl_typesupport_introspection_c.h
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support.c
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__rosidl_typesupport_introspection_c.h
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__type_support.c
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support.c
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__rosidl_typesupport_introspection_c.h
+[22.721s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__rosidl_typesupport_introspection_c.h
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__rosidl_typesupport_introspection_c.h
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__rosidl_typesupport_introspection_c.h
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__type_support.c
+[22.722s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.722s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__type_support.c
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__type_support.c
+[22.722s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__rosidl_typesupport_introspection_c.h
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__rosidl_typesupport_introspection_c.h
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__rosidl_typesupport_introspection_c.h
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__type_support.c
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[22.723s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.723s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__type_support.c
+[22.723s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__rosidl_typesupport_introspection_c.h
+[22.724s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_introspection_c.so
+[22.724s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_introspection_c.so" to ""
+[22.725s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_c.so
+[22.725s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_c.so" to ""
+[22.726s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.726s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.726s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_safety_mode.hpp
+[22.726s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/raw_request.hpp
+[22.726s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/load.hpp
+[22.726s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.726s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__struct.hpp
+[22.726s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__builder.hpp
+[22.727s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__builder.hpp
+[22.727s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__builder.hpp
+[22.727s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__traits.hpp
+[22.727s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__builder.hpp
+[22.728s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__struct.hpp
+[22.728s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__traits.hpp
+[22.728s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__struct.hpp
+[22.728s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__builder.hpp
+[22.728s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__struct.hpp
+[22.732s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__traits.hpp
+[22.733s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__builder.hpp
+[22.734s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__struct.hpp
+[22.734s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__traits.hpp
+[22.735s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__builder.hpp
+[22.736s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__traits.hpp
+[22.737s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__traits.hpp
+[22.737s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__struct.hpp
+[22.737s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__struct.hpp
+[22.738s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__builder.hpp
+[22.738s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__builder.hpp
+[22.738s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__builder.hpp
+[22.739s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__traits.hpp
+[22.739s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__struct.hpp
+[22.739s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__traits.hpp
+[22.740s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__struct.hpp
+[22.740s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__traits.hpp
+[22.740s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__traits.hpp
+[22.740s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__struct.hpp
+[22.741s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/popup.hpp
+[22.741s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_robot_mode.hpp
+[22.741s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_program_state.hpp
+[22.741s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/is_program_saved.hpp
+[22.742s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/add_to_log.hpp
+[22.742s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/get_loaded_program.hpp
+[22.742s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/is_program_running.hpp
+[22.742s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.743s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.743s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__builder.hpp
+[22.743s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__traits.hpp
+[22.743s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__struct.hpp
+[22.744s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__builder.hpp
+[22.744s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__builder.hpp
+[22.744s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__traits.hpp
+[22.744s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__traits.hpp
+[22.745s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__struct.hpp
+[22.745s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__struct.hpp
+[22.745s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/program_state.hpp
+[22.745s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/robot_mode.hpp
+[22.745s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/safety_mode.hpp
+[22.746s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.746s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/set_mode.hpp
+[22.746s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.746s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__struct.hpp
+[22.746s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__builder.hpp
+[22.747s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__traits.hpp
+[22.747s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.747s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.747s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.747s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__rosidl_typesupport_fastrtps_cpp.hpp
+[22.748s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__rosidl_typesupport_fastrtps_cpp.hpp
+[22.749s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/dds_fastrtps
+[22.749s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__rosidl_typesupport_fastrtps_cpp.hpp
+[22.749s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[22.749s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__rosidl_typesupport_fastrtps_cpp.hpp
+[22.750s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.750s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.750s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__rosidl_typesupport_fastrtps_cpp.hpp
+[22.750s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/dds_fastrtps
+[22.750s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[22.750s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[22.751s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[22.751s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.751s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.751s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/dds_fastrtps
+[22.751s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[22.751s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.so
+[22.752s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[22.752s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs
+[22.752s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv
+[22.752s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail
+[22.753s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__type_support.cpp
+[22.753s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__type_support.cpp
+[22.753s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__rosidl_typesupport_introspection_cpp.hpp
+[22.753s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__type_support.cpp
+[22.754s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/raw_request__rosidl_typesupport_introspection_cpp.hpp
+[22.754s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__type_support.cpp
+[22.754s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__type_support.cpp
+[22.754s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__type_support.cpp
+[22.755s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__type_support.cpp
+[22.755s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/popup__rosidl_typesupport_introspection_cpp.hpp
+[22.755s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/add_to_log__rosidl_typesupport_introspection_cpp.hpp
+[22.755s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_loaded_program__rosidl_typesupport_introspection_cpp.hpp
+[22.755s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_running__rosidl_typesupport_introspection_cpp.hpp
+[22.756s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_safety_mode__rosidl_typesupport_introspection_cpp.hpp
+[22.756s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__rosidl_typesupport_introspection_cpp.hpp
+[22.756s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__rosidl_typesupport_introspection_cpp.hpp
+[22.756s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_program_state__type_support.cpp
+[22.757s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/is_program_saved__rosidl_typesupport_introspection_cpp.hpp
+[22.757s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/get_robot_mode__type_support.cpp
+[22.757s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/srv/detail/load__type_support.cpp
+[22.757s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg
+[22.757s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__type_support.cpp
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/safety_mode__rosidl_typesupport_introspection_cpp.hpp
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__type_support.cpp
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__type_support.cpp
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/robot_mode__rosidl_typesupport_introspection_cpp.hpp
+[22.758s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/msg/detail/program_state__rosidl_typesupport_introspection_cpp.hpp
+[22.759s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action
+[22.759s] -- Up-to-date: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail
+[22.759s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+[22.759s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/include/ur_dashboard_msgs/ur_dashboard_msgs/action/detail/set_mode__type_support.cpp
+[22.759s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_introspection_cpp.so
+[22.760s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[22.760s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_cpp.so
+[22.761s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_typesupport_cpp.so" to ""
+[22.761s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/pythonpath.sh
+[22.762s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/pythonpath.dsv
+[22.762s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs-2.2.6-py3.10.egg-info
+[22.762s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs-2.2.6-py3.10.egg-info/PKG-INFO
+[22.762s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs-2.2.6-py3.10.egg-info/dependency_links.txt
+[22.762s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs-2.2.6-py3.10.egg-info/top_level.txt
+[22.763s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs-2.2.6-py3.10.egg-info/SOURCES.txt
+[22.763s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs
+[22.763s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[22.763s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[22.764s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/_ur_dashboard_msgs_s.ep.rosidl_typesupport_c.c
+[22.764s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv
+[22.764s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_saved_s.c
+[22.765s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_loaded_program_s.c
+[22.765s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_popup_s.c
+[22.765s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_safety_mode_s.c
+[22.765s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_robot_mode_s.c
+[22.765s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_running.py
+[22.766s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_saved.py
+[22.766s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_program_state.py
+[22.766s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_add_to_log_s.c
+[22.766s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_load.py
+[22.767s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_safety_mode.py
+[22.767s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/__init__.py
+[22.767s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_robot_mode.py
+[22.767s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_add_to_log.py
+[22.767s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_loaded_program.py
+[22.768s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_running_s.c
+[22.768s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_raw_request.py
+[22.768s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_load_s.c
+[22.768s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_popup.py
+[22.768s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_program_state_s.c
+[22.769s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_raw_request_s.c
+[22.769s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/libur_dashboard_msgs__rosidl_generator_py.so
+[22.769s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/__init__.py
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_program_state.py
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_safety_mode.py
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_robot_mode.py
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/__init__.py
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_program_state_s.c
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_safety_mode_s.c
+[22.770s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_robot_mode_s.c
+[22.771s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action
+[22.771s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action/_set_mode_s.c
+[22.771s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action/__init__.py
+[22.771s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action/_set_mode.py
+[22.771s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[22.772s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[22.826s] Listing '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs'...
+[22.826s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/__init__.py'...
+[22.826s] Listing '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action'...
+[22.826s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action/__init__.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/action/_set_mode.py'...
+[22.827s] Listing '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/__init__.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_program_state.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_robot_mode.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/msg/_safety_mode.py'...
+[22.827s] Listing '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/__init__.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_add_to_log.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_loaded_program.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_program_state.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_robot_mode.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_get_safety_mode.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_running.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_is_program_saved.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_load.py'...
+[22.827s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_popup.py'...
+[22.828s] Compiling '/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/srv/_raw_request.py'...
+[22.833s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[22.834s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[22.835s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[22.835s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[22.836s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[22.837s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages/ur_dashboard_msgs/ur_dashboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[22.837s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_generator_py.so
+[22.838s] -- Set runtime path of "/home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/lib/libur_dashboard_msgs__rosidl_generator_py.so" to ""
+[22.838s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/ProgramState.idl
+[22.839s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/RobotMode.idl
+[22.839s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/SafetyMode.idl
+[22.840s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/AddToLog.idl
+[22.840s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetLoadedProgram.idl
+[22.840s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetProgramState.idl
+[22.840s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetRobotMode.idl
+[22.841s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetSafetyMode.idl
+[22.841s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramRunning.idl
+[22.841s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramSaved.idl
+[22.842s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Load.idl
+[22.842s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Popup.idl
+[22.842s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/RawRequest.idl
+[22.843s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/action/SetMode.idl
+[22.843s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/ProgramState.msg
+[22.843s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/RobotMode.msg
+[22.844s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/msg/SafetyMode.msg
+[22.844s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/AddToLog.srv
+[22.844s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/AddToLog_Request.msg
+[22.845s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/AddToLog_Response.msg
+[22.845s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetLoadedProgram.srv
+[22.845s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetLoadedProgram_Request.msg
+[22.846s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetLoadedProgram_Response.msg
+[22.846s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetProgramState.srv
+[22.846s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetProgramState_Request.msg
+[22.846s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetProgramState_Response.msg
+[22.847s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetRobotMode.srv
+[22.847s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetRobotMode_Request.msg
+[22.847s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetRobotMode_Response.msg
+[22.848s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetSafetyMode.srv
+[22.848s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetSafetyMode_Request.msg
+[22.848s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/GetSafetyMode_Response.msg
+[22.849s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramRunning.srv
+[22.849s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramRunning_Request.msg
+[22.849s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramRunning_Response.msg
+[22.850s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramSaved.srv
+[22.850s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramSaved_Request.msg
+[22.850s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/IsProgramSaved_Response.msg
+[22.851s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Load.srv
+[22.851s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Load_Request.msg
+[22.851s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Load_Response.msg
+[22.851s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Popup.srv
+[22.852s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Popup_Request.msg
+[22.852s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/Popup_Response.msg
+[22.852s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/RawRequest.srv
+[22.853s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/RawRequest_Request.msg
+[22.853s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/srv/RawRequest_Response.msg
+[22.853s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/action/SetMode.action
+[22.854s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ament_index/resource_index/package_run_dependencies/ur_dashboard_msgs
+[22.854s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ament_index/resource_index/parent_prefix_path/ur_dashboard_msgs
+[22.854s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/ament_prefix_path.sh
+[22.854s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/ament_prefix_path.dsv
+[22.855s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/path.sh
+[22.855s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/environment/path.dsv
+[22.855s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/local_setup.bash
+[22.856s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/local_setup.sh
+[22.856s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/local_setup.zsh
+[22.856s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/local_setup.dsv
+[22.856s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/package.dsv
+[22.857s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ament_index/resource_index/packages/ur_dashboard_msgs
+[22.857s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_generator_cExport.cmake
+[22.857s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_generator_cExport-release.cmake
+[22.858s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[22.858s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+[22.858s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_introspection_cExport.cmake
+[22.858s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[22.859s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_cExport.cmake
+[22.859s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_cExport-release.cmake
+[22.859s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_generator_cppExport.cmake
+[22.859s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[22.860s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[22.860s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[22.860s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[22.860s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_cppExport.cmake
+[22.861s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgs__rosidl_typesupport_cppExport-release.cmake
+[22.861s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_generator_pyExport.cmake
+[22.861s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/export_ur_dashboard_msgs__rosidl_generator_pyExport-release.cmake
+[22.861s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/rosidl_cmake-extras.cmake
+[22.862s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[22.862s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[22.862s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[22.862s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[22.862s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[22.863s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[22.863s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgsConfig.cmake
+[22.863s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/cmake/ur_dashboard_msgsConfig-version.cmake
+[22.863s] -- Installing: /home/MAPR-project/ros2_ws/install/ur_dashboard_msgs/share/ur_dashboard_msgs/package.xml
+[22.868s] Invoked command in '/home/MAPR-project/ros2_ws/build/ur_dashboard_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/MAPR-project/ros2_ws/build/ur_dashboard_msgs
