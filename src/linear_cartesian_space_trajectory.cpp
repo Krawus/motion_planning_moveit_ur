@@ -26,15 +26,16 @@ int main(int argc, char *argv[])
   std::vector<geometry_msgs::msg::Pose> waypoints;
   
   // Getting current pose
-  geometry_msgs::msg::Pose currentPose = move_group_interface.getCurrentPose().pose;
+  geometry_msgs::msg::Pose currentPose = move_group_interface.getCurrentPose("wrist_3_link").pose;
 //   waypoints.push_back(currentPose);
 
   // Setting destination pose 
   geometry_msgs::msg::Pose destinationPose = currentPose;
-  destinationPose.position.z +=0.4;
+  destinationPose.position.z -=0.4;
+  destinationPose.position.x -  =0.4;
   waypoints.push_back(destinationPose);
   
-//   moveit::planning_interface::MoveGroupInterface::Plan plan;
+  moveit::planning_interface::MoveGroupInterface::Plan plan;
   moveit_msgs::msg::RobotTrajectory trajectory;
   const double jump_threshold = 0.0;
   const double eef_step = 0.01;
@@ -42,7 +43,7 @@ int main(int argc, char *argv[])
   RCLCPP_INFO(logger, "Visualizing plan 4 (Cartesian path) (%.2f%% achieved)", fraction * 100.0);
 
   bool success = true; // temporary
-//   plan.trajectory_ = trajectory;
+  plan.trajectory_ = trajectory;
 
 //   // Create a plan to that target pose
 //   auto const [success, plan] = [&move_group_interface]
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
   // Execute the plan
   if (success)
   {
-    move_group_interface.execute(trajectory);
+    move_group_interface.execute(plan);
   }
   else
   {
