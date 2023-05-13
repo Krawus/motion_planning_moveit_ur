@@ -21,7 +21,19 @@ ament_target_dependencies(
   "rclcpp"
 )
 
-install(TARGETS motion_planning_moveit
+add_executable(joint_space_trajectory src/joint_space_trajectory.cpp)
+target_include_directories(joint_space_trajectory PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>)
+target_compile_features(joint_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  joint_space_trajectory
+  "moveit_ros_planning_interface"
+  "rclcpp"
+)
+
+
+install(TARGETS motion_planning_moveit joint_space_trajectory
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

@@ -18,17 +18,16 @@ int main(int argc, char * argv[])
   // Create the MoveIt MoveGroup Interface
   using moveit::planning_interface::MoveGroupInterface;
   auto move_group_interface = MoveGroupInterface(node, "ur_manipulator");
-
   // Set a target Pose
   auto const target_pose = []{
     geometry_msgs::msg::Pose msg;
     msg.orientation.w = 1.0;
-    msg.position.x = 0.28;
-    msg.position.y = -0.1;
-    msg.position.z = 0.5;
+    msg.position.x = 0.38;
+    msg.position.y = -0.4;
+    msg.position.z = 0.7;
     return msg;
   }();
-  move_group_interface.setPoseTarget(target_pose);
+  move_group_interface.setPoseTarget(target_pose, "wrist_3_link");
 
   // Create a plan to that target pose
   auto const [success, plan] = [&move_group_interface]{
