@@ -93,8 +93,8 @@ def generate_launch_description():
     robot_description_semantic = get_robot_description_semantic()
     demo_node = Node(
         package="motion_planning_moveit",
-        executable="cartesian_space_trajectory",
-        name="cartesian_space_trajectory",
+        executable="linear_cartesian_space_trajectory",
+        name="linear_cartesian_space_trajectory",
         output="screen",
         parameters=[
             robot_description,

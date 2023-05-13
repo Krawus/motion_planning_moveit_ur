@@ -32,8 +32,19 @@ ament_target_dependencies(
   "rclcpp"
 )
 
+add_executable(linear_cartesian_space_trajectory src/linear_cartesian_space_trajectory.cpp)
+target_include_directories(linear_cartesian_space_trajectory PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>)
+target_compile_features(linear_cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  linear_cartesian_space_trajectory
+  "moveit_ros_planning_interface"
+  "rclcpp"
+)
 
-install(TARGETS cartesian_space_trajectory joint_space_trajectory
+
+install(TARGETS cartesian_space_trajectory joint_space_trajectory linear_cartesian_space_trajectory
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
