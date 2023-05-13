@@ -12,11 +12,11 @@ int main(int argc, char *argv[])
   // Initialize ROS and create the Node
   rclcpp::init(argc, argv);
   auto const node = std::make_shared<rclcpp::Node>(
-      "cartesian_space_traj",
+      "linear_cartesian_space_traj",
       rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true));
 
   // Create a ROS logger
-  auto const logger = rclcpp::get_logger("cartesian_space_traj");
+  auto const logger = rclcpp::get_logger("linear_cartesian_space_traj");
 
   // Create the MoveIt MoveGroup Interface
   using moveit::planning_interface::MoveGroupInterface;
@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
   {
     geometry_msgs::msg::Pose msg;
     // Point
-    msg.position.x = 0.4;
-    msg.position.y = 0.4;
-    msg.position.z = 0.2;
+    msg.position.x = 0.38;
+    msg.position.y = -0.4;
+    msg.position.z = 0.7;
     // Quaternion
     msg.orientation.w = 1.0;
     msg.orientation.x = 0.0;
