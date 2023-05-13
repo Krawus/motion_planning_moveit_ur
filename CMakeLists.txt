@@ -10,13 +10,13 @@ find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
 
-add_executable(motion_planning_moveit src/motion_planning_moveit.cpp)
-target_include_directories(motion_planning_moveit PUBLIC
+add_executable(cartesian_space_trajectory src/cartesian_space_trajectory.cpp)
+target_include_directories(cartesian_space_trajectory PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
-target_compile_features(motion_planning_moveit PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_compile_features(cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 ament_target_dependencies(
-  motion_planning_moveit
+  cartesian_space_trajectory
   "moveit_ros_planning_interface"
   "rclcpp"
 )
@@ -33,7 +33,7 @@ ament_target_dependencies(
 )
 
 
-install(TARGETS motion_planning_moveit joint_space_trajectory
+install(TARGETS cartesian_space_trajectory joint_space_trajectory
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
