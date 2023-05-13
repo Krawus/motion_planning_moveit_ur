@@ -8,8 +8,6 @@
 #include <moveit_msgs/msg/collision_object.hpp>
 #include <math.h>
 
-// #define M_PI  3.14159265358979323846
-
 static const rclcpp::Logger logger = rclcpp::get_logger("joint_traj_logger");
 
 void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, double joint0, double joint1, double joint2, 
@@ -22,9 +20,44 @@ void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, do
   jointConfiguration[5] = joint5 * M_PI/180.0;
 }
 
+enum planner{
+    SBLkConfigDefault,
+    ESTkConfigDefault,
+    LBKPIECEkConfigDefault,
+    BKPIECEkConfigDefault,
+    KPIECEkConfigDefault,
+    RRTkConfigDefault,
+    RRTConnectkConfigDefault,
+    RRTstarkConfigDefault,
+    TRRTkConfigDefault,
+    PRMkConfigDefault,
+    PRMstarkConfigDefault,
+};
+
+
+
+void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, const planner &p){
+
+  switch (p){
+    case SBLkConfigDefault: moveGroup.setPlannerId("SBLkConfigDefault"); break;
+    case ESTkConfigDefault: moveGroup.setPlannerId("ESTkConfigDefault"); break;
+    case LBKPIECEkConfigDefault: moveGroup.setPlannerId("LBKPIECEkConfigDefault"); break;
+    case BKPIECEkConfigDefault: moveGroup.setPlannerId("BKPIECEkConfigDefault"); break;
+    case KPIECEkConfigDefault: moveGroup.setPlannerId("KPIECEkConfigDefault"); break;
+    case RRTkConfigDefault: moveGroup.setPlannerId("RRTkConfigDefault"); break;
+    case RRTConnectkConfigDefault: moveGroup.setPlannerId("RRTConnectkConfigDefault"); break;
+    case RRTstarkConfigDefault: moveGroup.setPlannerId("RRTstarkConfigDefault"); break;
+    case TRRTkConfigDefault: moveGroup.setPlannerId("TRRTkConfigDefault"); break;
+    case PRMkConfigDefault: moveGroup.setPlannerId("PRMkConfigDefault"); break;
+    case PRMstarkConfigDefault: moveGroup.setPlannerId("PRMstarkConfigDefault"); break;
+    default: moveGroup.setPlannerId("PRMkConfigDefault");
+  }
+}
+
 
 int main(int argc, char * argv[])
 {
+
   rclcpp::init(argc, argv);
   rclcpp::NodeOptions nodeOptions;
   nodeOptions.automatically_declare_parameters_from_overrides(true);
@@ -37,6 +70,9 @@ int main(int argc, char * argv[])
   static const std::string PLANNING_GROUP = "ur_manipulator";
 
   moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
+  
+  setPlanner(moveGroup, planner::ESTkConfigDefault);
+  
   moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
 
   const moveit::core::JointModelGroup* jointModelGroup = moveGroup.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
@@ -56,7 +92,6 @@ int main(int argc, char * argv[])
     RCLCPP_WARN(logger, "Position out of bounds!!!");
   }
   
-
   auto const [success, plan] = [&moveGroup]{
     moveit::planning_interface::MoveGroupInterface::Plan msg;
     auto const ok = static_cast<bool>(moveGroup.plan(msg));
@@ -69,6 +104,9 @@ int main(int argc, char * argv[])
   } else {
     RCLCPP_ERROR(logger, "Planing failed!");
   }
+
+
+
 
   rclcpp::shutdown();
 
