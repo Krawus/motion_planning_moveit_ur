@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(moveit_visual_tools REQUIRED)  
 
 add_executable(cartesian_space_trajectory src/cartesian_space_trajectory.cpp)
 target_include_directories(cartesian_space_trajectory PUBLIC
@@ -19,6 +20,7 @@ ament_target_dependencies(
   cartesian_space_trajectory
   "moveit_ros_planning_interface"
   "rclcpp"
+  "moveit_visual_tools"
 )
 
 add_executable(joint_space_trajectory src/joint_space_trajectory.cpp)
@@ -30,6 +32,7 @@ ament_target_dependencies(
   joint_space_trajectory
   "moveit_ros_planning_interface"
   "rclcpp"
+  "moveit_visual_tools"
 )
 
 add_executable(linear_cartesian_space_trajectory src/linear_cartesian_space_trajectory.cpp)
@@ -41,6 +44,7 @@ ament_target_dependencies(
   linear_cartesian_space_trajectory
   "moveit_ros_planning_interface"
   "rclcpp"
+  "moveit_visual_tools"
 )
 
 

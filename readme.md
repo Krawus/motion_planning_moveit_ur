@@ -28,3 +28,8 @@ Launch motion planning node (work in progress)
 ```
 ros2 launch motion_planning_moveit motion_planning_moveit.launch.py
 ```
+
+To use visualization tools you are able to install these packages
+```
+apt install ros-humble-moveit-visual-tools
+```

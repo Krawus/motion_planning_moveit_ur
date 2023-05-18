@@ -2,6 +2,9 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include <moveit_visual_tools/moveit_visual_tools.h>
+
+namespace rvt = rviz_visual_tools;
 
 // Define planning group
 static const std::string PLANNING_GROUP = "ur_manipulator";
@@ -14,6 +17,30 @@ int main(int argc, char *argv[])
   auto const node = std::make_shared<rclcpp::Node>(
       "linear_cartesian_space_traj",
       rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true));
+      
+
+
+  auto moveit_cpp_ptr = std::make_shared<moveit_cpp::MoveItCpp>(node);
+  moveit_cpp_ptr->getPlanningSceneMonitor()->providePlanningSceneService();   
+
+
+visual_tools.deleteAllMarkers();
+visual_tools.loadRemoteControl(); 
+  auto moveit_visual_tools = moveit_visual_tools::MoveItVisualTools{
+    node, "wrist_3_link", rviz_visual_tools::RVIZ_MARKER_TOPIC,
+    move_group_interface.getRobotModel()};
+  moveit_visual_tools.deleteAllMarkers();
+  moveit_visual_tools.loadRemoteControl();
+
+  auto robot_model_ptr = moveit_cpp_ptr->getRobotModel();
+  auto joint_model_group_ptr = robot_model_ptr->getJointModelGroup(PLANNING_GROUP);
+
+
+
+
+
+
+
 
   // Create a ROS logger
   auto const logger = rclcpp::get_logger("linear_cartesian_space_traj");
@@ -32,7 +59,7 @@ int main(int argc, char *argv[])
   // Setting destination pose 
   geometry_msgs::msg::Pose destinationPose = currentPose;
   destinationPose.position.x=0.5;
-  destinationPose.position.y=0.6;
+  destinationPose.position.y=0.7;
   destinationPose.position.z=0.5;
   waypoints.push_back(destinationPose);
   
@@ -45,6 +72,10 @@ int main(int argc, char *argv[])
 
   bool success = true; // temporary
   plan.trajectory_ = trajectory;
+  moveit_visual_tools.publishAxisLabeled(currentPose, "start_pose");
+  moveit_visual_tools.publishAxisLabeled(destinationPose, "target_pose");
+  moveit_visual_tools.publishTrajectoryLine(trajectory, joint_model_group_ptr);
+  moveit_visual_tools.trigger();
 
 
   // Execute the plan
