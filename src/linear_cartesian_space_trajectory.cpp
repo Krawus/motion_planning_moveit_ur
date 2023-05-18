@@ -31,8 +31,9 @@ int main(int argc, char *argv[])
 
   // Setting destination pose 
   geometry_msgs::msg::Pose destinationPose = currentPose;
-  destinationPose.position.z -=0.4;
-  destinationPose.position.x -  =0.4;
+  destinationPose.position.x=0.5;
+  destinationPose.position.y=0.6;
+  destinationPose.position.z=0.5;
   waypoints.push_back(destinationPose);
   
   moveit::planning_interface::MoveGroupInterface::Plan plan;
@@ -45,13 +46,6 @@ int main(int argc, char *argv[])
   bool success = true; // temporary
   plan.trajectory_ = trajectory;
 
-//   // Create a plan to that target pose
-//   auto const [success, plan] = [&move_group_interface]
-//   {
-//     moveit::planning_interface::MoveGroupInterface::Plan msg;
-//     auto const ok = static_cast<bool>(move_group_interface.plan(msg));
-//     return std::make_pair(ok, msg);
-//   }();
 
   // Execute the plan
   if (success)
