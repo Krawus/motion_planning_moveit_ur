@@ -23,8 +23,21 @@ Start MoveIt
 ```
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true use_fake_hardware:=true
 ```
-\
-Launch motion planning node (work in progress)
+
+
+download motion planning interfaces
 ```
-ros2 launch motion_planning_moveit motion_planning_moveit.launch.py
+git clone git@github.com:Krawus/motion_planning_interfaces.git
 ```
+
+Launch motion planning node service
+```
+ros2 launch motion_planning_moveit motion_planning_server.launch.py 
+```
+Execute trajectory in joint space
+```
+ros2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{joints: [50,-75,0,0,30,0], planner: 
+1}"
+```
+
+*insert lista plannerow i wartości tutaj albo da sie jako logger przy odpalaniu servera jako INFO z LOGGERA*

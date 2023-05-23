@@ -34,8 +34,6 @@ enum planner{
     PRMstarkConfigDefault,
 };
 
-
-
 void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, const planner &p){
 
   switch (p){

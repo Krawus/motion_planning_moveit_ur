@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(motion_planning_interfaces REQUIRED)
 
 add_executable(motion_planning_moveit src/motion_planning_moveit.cpp)
 target_include_directories(motion_planning_moveit PUBLIC
@@ -32,9 +33,14 @@ ament_target_dependencies(
   "rclcpp"
 )
 
+add_executable(motion_planning_server src/motion_planning_server.cpp)
+ament_target_dependencies(motion_planning_server rclcpp moveit_ros_planning_interface motion_planning_interfaces)
 
-install(TARGETS motion_planning_moveit joint_space_trajectory
+
+install(TARGETS motion_planning_moveit joint_space_trajectory motion_planning_server
   DESTINATION lib/${PROJECT_NAME})
+
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -52,5 +58,19 @@ install(
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
+
+# ------------------------------------
+# find_package(rosidl_default_generators REQUIRED)
+
+# set(srv_files
+#   "srv/JointTrajectory.srv"
+# )
+
+# rosidl_generate_interfaces(${PROJECT_NAME}
+#   ${srv_files}
+# )
+
+# ament_export_dependencies(rosidl_default_runtime)
+#-----------------------------------------------
 
 ament_package()
