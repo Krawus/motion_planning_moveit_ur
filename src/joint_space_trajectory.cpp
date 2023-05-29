@@ -8,9 +8,15 @@
 #include <moveit_msgs/msg/collision_object.hpp>
 #include <math.h>
 
+// Create a ROS logger
 static const rclcpp::Logger logger = rclcpp::get_logger("joint_traj_logger");
 
-void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, double joint0, double joint1, double joint2, 
+// Define planning group
+static const std::string PLANNING_GROUP = "ur_manipulator";
+
+// Function is setting desired joint angles in degrees to manipulator's joint 
+// configuration and calculating them into radians
+ void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, double joint0, double joint1, double joint2, 
                                                     double joint3, double joint4, double joint5){
   jointConfiguration[0] = joint0 * M_PI/180.0;
   jointConfiguration[1] = joint1 * M_PI/180.0;
@@ -20,6 +26,7 @@ void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, do
   jointConfiguration[5] = joint5 * M_PI/180.0;
 }
 
+// Available planners
 enum planner{
     SBLkConfigDefault,
     ESTkConfigDefault,
@@ -34,6 +41,8 @@ enum planner{
     PRMstarkConfigDefault,
 };
 
+
+// Function is setting planner passed with params to move group
 void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, const planner &p){
 
   switch (p){
@@ -56,6 +65,7 @@ void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, const
 int main(int argc, char * argv[])
 {
 
+  // Initialize ROS and create the Node
   rclcpp::init(argc, argv);
   rclcpp::NodeOptions nodeOptions;
   nodeOptions.automatically_declare_parameters_from_overrides(true);
@@ -65,7 +75,6 @@ int main(int argc, char * argv[])
   executor.add_node(moveGroupNode);
   std::thread([&executor]() { executor.spin(); }).detach();
 
-  static const std::string PLANNING_GROUP = "ur_manipulator";
 
   moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
   
