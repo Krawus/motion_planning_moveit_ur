@@ -179,7 +179,7 @@ public:
             const double jump_threshold = 0.0;
             const double eef_step = 0.01;
             double fraction = moveGroup.computeCartesianPath(waypoints,eef_step,jump_threshold,trajectory);
-            success = fraction == 1 ? true : false;
+            success = fraction >0 ? true : false;
             plan.trajectory_ = trajectory;
 
 
@@ -207,6 +207,7 @@ public:
         // Planner type selectors
         // 0 - joint space planner
         // 1 - cartesian space planner
+        // 2 - cartesian space planner - linear trajectory
         int type = request->type;
 
         if(!type){
