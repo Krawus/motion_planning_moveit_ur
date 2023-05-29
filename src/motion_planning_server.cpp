@@ -11,6 +11,21 @@
 
 #include "motion_planning_interfaces/srv/joint_trajectory.hpp"
 
+
+geometry_msgs::msg::Pose createPoseMsg(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request){
+    geometry_msgs::msg::Pose msg;
+    // Point
+    msg.position.x = request->pose[0];
+    msg.position.x = request->pose[1];
+    msg.position.x = request->pose[2];
+    // Orientation
+    msg.orientation.w = request->pose[3];
+    msg.orientation.x = request->pose[4];
+    msg.orientation.y = request->pose[5];
+    msg.orientation.z = request->pose[6];
+    return msg;
+}
+
 void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, double joint0, double joint1, double joint2, 
                                                     double joint3, double joint4, double joint5){
   jointConfiguration[0] = joint0 * M_PI/180.0;
@@ -53,6 +68,9 @@ void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, uint8
   }
 }
 
+// Define planning group
+static const std::string PLANNING_GROUP = "ur_manipulator";
+
 
 
 class MotionPlanningServer : public rclcpp::Node 
@@ -81,14 +99,13 @@ public:
         std::thread([&executor]() { executor.spin(); }).detach();
 
         
-        static const std::string PLANNING_GROUP = "ur_manipulator";
-
         moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
         
         int planner = request->planner;
 
         setPlanner(moveGroup, planner);
         
+
         moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
 
         const moveit::core::JointModelGroup* jointModelGroup = moveGroup.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
@@ -136,29 +153,73 @@ public:
         }                  
     
     }
-    // void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
-    //     rclcpp::Logger logger = this->get_logger();
-
-    // }
-    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+    void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response,bool isLinearTrajectory = false){
         rclcpp::Logger logger = this->get_logger();
-        RCLCPP_INFO(logger, "\n@@@@@@@ Trajectory Selector @@@@@@@\n");
-
-        auto moveGroupNode = rclcpp::Node::make_shared("joint_space_trajectory");
+        auto moveGroupNode = rclcpp::Node::make_shared(isLinearTrajectory ? "cartesian_space_trajectory" : "cartesian_space_trajectory_linear");
 
         rclcpp::executors::SingleThreadedExecutor executor;
         executor.add_node(moveGroupNode);
         std::thread([&executor]() { executor.spin(); }).detach();
-        std::string type = request->type;
+        
+        moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode,PLANNING_GROUP);
 
-        if(type == "pose"){
-            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner @@@@@@@\n");
-            response->executed = true;
-            return;
+        int planner = request->planner;
+        setPlanner(moveGroup, planner);
+
+        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
+        bool success = false;
+        moveit::planning_interface::MoveGroupInterface::Plan plan;
+        if(isLinearTrajectory){
+            std::vector<geometry_msgs::msg::Pose> waypoints;
+            geometry_msgs::msg::Pose currentPose = moveGroup.getCurrentPose("wrist_3_link").pose;
+            waypoints.push_back(currentPose);
+            waypoints.push_back(createPoseMsg(request));
+
+            moveit_msgs::msg::RobotTrajectory trajectory;
+            const double jump_threshold = 0.0;
+            const double eef_step = 0.01;
+            double fraction = moveGroup.computeCartesianPath(waypoints,eef_step,jump_threshold,trajectory);
+            success = fraction == 1 ? true : false;
+            plan.trajectory_ = trajectory;
+
+
+        } else { 
+            auto target_pose = createPoseMsg(request);
+            moveGroup.setPoseTarget(target_pose,"wrist_3_link");
+            success = static_cast<bool>(moveGroup.plan(plan));
+        } 
+        response->executed = success;
+        if(success){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Planing succeed!@@@@@@@\n");
+            moveGroup.execute(plan);
+            executor.cancel();
         }
-        if(type == "joints"){
+        else{
+            RCLCPP_ERROR(logger, "\n@@@@@@@ Planing failed! @@@@@@@\n");
+            executor.cancel();
+        }
+    }
+    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+        rclcpp::Logger logger = this->get_logger();
+        RCLCPP_INFO(logger, "\n@@@@@@@ Trajectory Selector @@@@@@@\n");
+
+
+        // Planner type selectors
+        // 0 - joint space planner
+        // 1 - cartesian space planner
+        int type = request->type;
+
+        if(!type){
             RCLCPP_INFO(logger, "\n@@@@@@@ Joints space planner @@@@@@@\n");
             jointSpaceTrajectoryExecute(request,response);
+        }
+        if(type == 1){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner @@@@@@@\n");
+            cartesianSpaceTrajectoryExecute(request,response,false);
+        }
+        if(type == 2){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner - lienar trajectory @@@@@@@\n");
+            cartesianSpaceTrajectoryExecute(request,response,true);
         }
 
 
