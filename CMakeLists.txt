@@ -11,45 +11,46 @@ find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(motion_planning_interfaces REQUIRED)
 
-add_executable(cartesian_space_trajectory src/cartesian_space_trajectory.cpp)
-target_include_directories(cartesian_space_trajectory PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-ament_target_dependencies(
-  cartesian_space_trajectory
-  "moveit_ros_planning_interface"
-  "rclcpp"
-)
+# add_executable(cartesian_space_trajectory src/cartesian_space_trajectory.cpp)
+# target_include_directories(cartesian_space_trajectory PUBLIC
+#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   $<INSTALL_INTERFACE:include>)
+# target_compile_features(cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+# ament_target_dependencies(
+#   cartesian_space_trajectory
+#   "moveit_ros_planning_interface"
+#   "rclcpp"
+# )
 
-add_executable(joint_space_trajectory src/joint_space_trajectory.cpp)
-target_include_directories(joint_space_trajectory PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:include>)
-target_compile_features(joint_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-ament_target_dependencies(
-  joint_space_trajectory
-  "moveit_ros_planning_interface"
-  "rclcpp"
-)
+# add_executable(joint_space_trajectory src/joint_space_trajectory.cpp)
+# target_include_directories(joint_space_trajectory PUBLIC
+#     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#     $<INSTALL_INTERFACE:include>)
+# target_compile_features(joint_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+# ament_target_dependencies(
+#   joint_space_trajectory
+#   "moveit_ros_planning_interface"
+#   "rclcpp"
+# )
 
-add_executable(linear_cartesian_space_trajectory src/linear_cartesian_space_trajectory.cpp)
-target_include_directories(linear_cartesian_space_trajectory PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:include>)
-target_compile_features(linear_cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-ament_target_dependencies(
-  linear_cartesian_space_trajectory
-  "moveit_ros_planning_interface"
-  "rclcpp"
-)
+# add_executable(linear_cartesian_space_trajectory src/linear_cartesian_space_trajectory.cpp)
+# target_include_directories(linear_cartesian_space_trajectory PUBLIC
+#     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#     $<INSTALL_INTERFACE:include>)
+# target_compile_features(linear_cartesian_space_trajectory PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+# ament_target_dependencies(
+#   linear_cartesian_space_trajectory
+#   "moveit_ros_planning_interface"
+#   "rclcpp"
+# )
 
 add_executable(motion_planning_server src/motion_planning_server.cpp)
 ament_target_dependencies(motion_planning_server rclcpp moveit_ros_planning_interface motion_planning_interfaces)
 
 
-install(TARGETS cartesian_space_trajectory joint_space_trajectory linear_cartesian_space_trajectory motion_planning_server
+install(TARGETS motion_planning_server
   DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS cartesian_space_trajectory joint_space_trajectory linear_cartesian_space_trajectory motion_planning_server
 
 
 

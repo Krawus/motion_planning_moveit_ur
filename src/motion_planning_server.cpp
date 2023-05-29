@@ -136,7 +136,33 @@ public:
         }                  
     
     }
+    // void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+    //     rclcpp::Logger logger = this->get_logger();
 
+    // }
+    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+        rclcpp::Logger logger = this->get_logger();
+        RCLCPP_INFO(logger, "\n@@@@@@@ Trajectory Selector @@@@@@@\n");
+
+        auto moveGroupNode = rclcpp::Node::make_shared("joint_space_trajectory");
+
+        rclcpp::executors::SingleThreadedExecutor executor;
+        executor.add_node(moveGroupNode);
+        std::thread([&executor]() { executor.spin(); }).detach();
+        std::string type = request->type;
+
+        if(type == "pose"){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner @@@@@@@\n");
+            response->executed = true;
+            return;
+        }
+        if(type == "joints"){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Joints space planner @@@@@@@\n");
+            jointSpaceTrajectoryExecute(request,response);
+        }
+
+
+    }
 
 private:
     rclcpp::Service<motion_planning_interfaces::srv::JointTrajectory>::SharedPtr joint_space_trajectory_service;
