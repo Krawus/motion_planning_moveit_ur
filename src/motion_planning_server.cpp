@@ -10,15 +10,29 @@
 
 
 #include "motion_planning_interfaces/srv/joint_trajectory.hpp"
+#include "motion_planning_interfaces/srv/obstacle_management.hpp"
 
-void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, double joint0, double joint1, double joint2, 
-                                                    double joint3, double joint4, double joint5){
-  jointConfiguration[0] = joint0 * M_PI/180.0;
-  jointConfiguration[1] = joint1 * M_PI/180.0;
-  jointConfiguration[2] = joint2 * M_PI/180.0;
-  jointConfiguration[3] = joint3 * M_PI/180.0;
-  jointConfiguration[4] = joint4 * M_PI/180.0;
-  jointConfiguration[5] = joint5 * M_PI/180.0;
+
+geometry_msgs::msg::Pose createPoseMsg(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request){
+    geometry_msgs::msg::Pose msg;
+    // Point
+    msg.position.x = request->pose[0];
+    msg.position.x = request->pose[1];
+    msg.position.x = request->pose[2];
+    // Orientation
+    msg.orientation.w = request->pose[3];
+    msg.orientation.x = request->pose[4];
+    msg.orientation.y = request->pose[5];
+    msg.orientation.z = request->pose[6];
+    return msg;
+}
+
+void setJointGroupPositionsInDegrees(std::vector<double> &jointConfiguration, std::array<double,6> joints){
+    int counter = 0;
+    for (auto joint : joints){
+        jointConfiguration[counter] = joint*M_PI/180.0;
+        counter++;
+    }
 }
 
 enum planner{
@@ -53,6 +67,9 @@ void setPlanner(moveit::planning_interface::MoveGroupInterface &moveGroup, uint8
   }
 }
 
+// Define planning group
+static const std::string PLANNING_GROUP = "ur_manipulator";
+
 
 
 class MotionPlanningServer : public rclcpp::Node 
@@ -64,6 +81,10 @@ public:
         this->joint_space_trajectory_service = this->create_service<motion_planning_interfaces::srv::JointTrajectory>
         ("joint_space_trajectory_service", 
         std::bind(&MotionPlanningServer::jointSpaceTrajectoryExecute, this, _1, _2));
+
+        this->obstacle_service = this->create_service<motion_planning_interfaces::srv::ObstacleManagement>
+        ("obstacles_service",
+        std::bind(&MotionPlanningServer::obstacleManagement,this,_1,_2));
 
     }
 
@@ -81,14 +102,13 @@ public:
         std::thread([&executor]() { executor.spin(); }).detach();
 
         
-        static const std::string PLANNING_GROUP = "ur_manipulator";
-
         moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
         
         int planner = request->planner;
 
         setPlanner(moveGroup, planner);
         
+
         moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
 
         const moveit::core::JointModelGroup* jointModelGroup = moveGroup.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
@@ -99,9 +119,7 @@ public:
         current_state->copyJointGroupPositions(jointModelGroup, jointGroupPositions);
 
 
-        // setJointGroupPositionsInDegrees(jointGroupPositions, 50.0, -75.0, 0.0, 0.0, 30.0 ,0.0);
-        setJointGroupPositionsInDegrees(jointGroupPositions, request->joints[0], request->joints[1], request->joints[2],
-                                        request->joints[3], request->joints[4], request->joints[5]);
+        setJointGroupPositionsInDegrees(jointGroupPositions, request->joints);
 
 
         moveGroup.setMaxVelocityScalingFactor(0.70);
@@ -136,10 +154,173 @@ public:
         }                  
     
     }
+    void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response,bool isLinearTrajectory = false){
+        rclcpp::Logger logger = this->get_logger();
+        auto moveGroupNode = rclcpp::Node::make_shared(isLinearTrajectory ? "cartesian_space_trajectory" : "cartesian_space_trajectory_linear");
 
+        rclcpp::executors::SingleThreadedExecutor executor;
+        executor.add_node(moveGroupNode);
+        std::thread([&executor]() { executor.spin(); }).detach();
+        
+        moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode,PLANNING_GROUP);
+
+        int planner = request->planner;
+        setPlanner(moveGroup, planner);
+
+        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
+        bool success = false;
+        moveit::planning_interface::MoveGroupInterface::Plan plan;
+        if(isLinearTrajectory){
+            std::vector<geometry_msgs::msg::Pose> waypoints;
+            geometry_msgs::msg::Pose currentPose = moveGroup.getCurrentPose("wrist_3_link").pose;
+            waypoints.push_back(currentPose);
+            waypoints.push_back(createPoseMsg(request));
+
+            moveit_msgs::msg::RobotTrajectory trajectory;
+            const double jump_threshold = 0.0;
+            const double eef_step = 0.01;
+            double fraction = moveGroup.computeCartesianPath(waypoints,eef_step,jump_threshold,trajectory);
+            success = fraction >0 ? true : false;
+            plan.trajectory_ = trajectory;
+
+
+        } else { 
+            auto target_pose = createPoseMsg(request);
+            moveGroup.setPoseTarget(target_pose,"wrist_3_link");
+            success = static_cast<bool>(moveGroup.plan(plan));
+        } 
+        response->executed = success;
+        if(success){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Planing succeed!@@@@@@@\n");
+            moveGroup.execute(plan);
+            executor.cancel();
+        }
+        else{
+            RCLCPP_ERROR(logger, "\n@@@@@@@ Planing failed! @@@@@@@\n");
+            executor.cancel();
+        }
+    }
+    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+        
+        rclcpp::Logger logger = this->get_logger();
+        RCLCPP_INFO(logger, "\n@@@@@@@ Trajectory Selector @@@@@@@\n");
+
+
+        // Planner type selectors
+        // 0 - joint space planner
+        // 1 - cartesian space planner
+        // 2 - cartesian space planner - linear trajectory
+        int type = request->type;
+
+        if(!type){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Joints space planner @@@@@@@\n");
+            jointSpaceTrajectoryExecute(request,response);
+        }
+        if(type == 1){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner @@@@@@@\n");
+            cartesianSpaceTrajectoryExecute(request,response,false);
+        }
+        if(type == 2){
+            RCLCPP_INFO(logger, "\n@@@@@@@ Cartesian space planner - lienar trajectory @@@@@@@\n");
+            cartesianSpaceTrajectoryExecute(request,response,true);
+        }
+
+
+    }
+    void obstacleManagement(const motion_planning_interfaces::srv::ObstacleManagement::Request::SharedPtr request, const motion_planning_interfaces::srv::ObstacleManagement::Response::SharedPtr response){
+        rclcpp::Logger logger = this->get_logger();
+
+        if(request->type == "add"){
+            addObstacle(request,response);
+        }
+        else if(request->type == "remove"){
+            removeObstacle(request,response);
+        }
+        else {
+        RCLCPP_INFO(logger, "\n@@@@@@@ Invalid Obstacle Management type @@@@@@@\n");
+
+        }
+    }
+    void addObstacle(const motion_planning_interfaces::srv::ObstacleManagement::Request::SharedPtr request, const motion_planning_interfaces::srv::ObstacleManagement::Response::SharedPtr response){
+        rclcpp::Logger logger = this->get_logger();
+        RCLCPP_INFO(logger, "\n@@@@@@@ Obstacle management @@@@@@@\n");
+
+        auto moveGroupNode = rclcpp::Node::make_shared("obstacle_manager");
+
+        rclcpp::executors::SingleThreadedExecutor executor;
+        executor.add_node(moveGroupNode);
+        std::thread([&executor]() { executor.spin(); }).detach();
+
+        moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
+        std::string box_id = !request->box_id.empty() ? request->box_id : "box_"+std::to_string(this->objectsCount)   ; 
+
+        auto const box = [boxPosition = request->box_position,boxDimensions = request->box_dimensions,box_id,frameId = moveGroup.getPlanningFrame()]{
+            moveit_msgs::msg::CollisionObject collision_object;
+            collision_object.header.frame_id = frameId;
+            collision_object.id = box_id;
+            shape_msgs::msg::SolidPrimitive primitive;
+
+            primitive.type = primitive.BOX;
+            primitive.dimensions.resize(3);
+            primitive.dimensions[primitive.BOX_X] = boxDimensions[0];
+            primitive.dimensions[primitive.BOX_Y] = boxDimensions[1];
+            primitive.dimensions[primitive.BOX_Z] = boxDimensions[2];
+
+            geometry_msgs::msg::Pose box_pose;
+            box_pose.orientation.w = 1.0;
+            box_pose.position.x = boxPosition[0];
+            box_pose.position.y = boxPosition[1];
+            box_pose.position.z = boxPosition[2];
+
+            collision_object.primitives.push_back(primitive);
+            collision_object.primitive_poses.push_back(box_pose);
+            collision_object.operation = collision_object.ADD;
+
+            return collision_object;
+        }();
+
+        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
+        planningSceneInterface.applyCollisionObject(box);
+        this->objectsCount++;
+
+        response->created = true;
+        executor.cancel();
+
+    }
+
+    void removeObstacle(const motion_planning_interfaces::srv::ObstacleManagement::Request::SharedPtr request, const motion_planning_interfaces::srv::ObstacleManagement::Response::SharedPtr response){
+        rclcpp::Logger logger = this->get_logger();
+        RCLCPP_INFO(logger, "\n@@@@@@@ Obstacle management @@@@@@@\n");
+
+        auto moveGroupNode = rclcpp::Node::make_shared("obstacle_manager");
+
+        rclcpp::executors::SingleThreadedExecutor executor;
+        executor.add_node(moveGroupNode);
+        std::thread([&executor]() { executor.spin(); }).detach();
+        std::string box_id = request->box_id;
+
+        moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
+
+        auto const box = [&box_id,frameId = moveGroup.getPlanningFrame()]{
+            moveit_msgs::msg::CollisionObject collision_object;
+            collision_object.header.frame_id = frameId;
+            collision_object.id = box_id;
+            collision_object.operation = collision_object.REMOVE;
+
+            return collision_object;
+        }();
+
+        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
+        planningSceneInterface.applyCollisionObject(box);
+
+        response->created = true;
+        executor.cancel();
+    }
 
 private:
     rclcpp::Service<motion_planning_interfaces::srv::JointTrajectory>::SharedPtr joint_space_trajectory_service;
+    rclcpp::Service<motion_planning_interfaces::srv::ObstacleManagement>::SharedPtr obstacle_service;
+    int objectsCount = 0;
 
 };
 
