@@ -252,14 +252,12 @@ public:
         std::thread([&executor]() { executor.spin(); }).detach();
 
         moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
-        double[3] boxDimensions = request->box_dimensions;
-        double[3] boxPosition = request->box_position;
-        std::string boxId = 'box_'+std::to_string(this->objectsCount); 
+        std::string box_id = !request->box_id.empty() ? request->box_id : "box_"+std::to_string(this->objectsCount)   ; 
 
-        auto const box = [boxPosition,boxDimensions,boxId,frameId = moveGroup.getPlanningFrame()]{
+        auto const box = [boxPosition = request->box_position,boxDimensions = request->box_dimensions,box_id,frameId = moveGroup.getPlanningFrame()]{
             moveit_msgs::msg::CollisionObject collision_object;
             collision_object.header.frame_id = frameId;
-            collision_object.id = boxId;
+            collision_object.id = box_id;
             shape_msgs::msg::SolidPrimitive primitive;
 
             primitive.type = primitive.BOX;
@@ -283,9 +281,10 @@ public:
 
         moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
         planningSceneInterface.applyCollisionObject(box);
+        this->objectsCount++;
 
         response->created = true;
-        executor.cancel()
+        executor.cancel();
 
     }
 
@@ -298,12 +297,26 @@ public:
         rclcpp::executors::SingleThreadedExecutor executor;
         executor.add_node(moveGroupNode);
         std::thread([&executor]() { executor.spin(); }).detach();
+        std::string box_id = request->box_id;
 
         moveit::planning_interface::MoveGroupInterface moveGroup(moveGroupNode, PLANNING_GROUP);
-        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
-        planningSceneInterface.removeCollisionObjects()
 
+        auto const box = [&box_id,frameId = moveGroup.getPlanningFrame()]{
+            moveit_msgs::msg::CollisionObject collision_object;
+            collision_object.header.frame_id = frameId;
+            collision_object.id = box_id;
+            collision_object.operation = collision_object.REMOVE;
+
+            return collision_object;
+        }();
+
+        moveit::planning_interface::PlanningSceneInterface planningSceneInterface;
+        planningSceneInterface.applyCollisionObject(box);
+
+        response->created = true;
+        executor.cancel();
     }
+
 private:
     rclcpp::Service<motion_planning_interfaces::srv::JointTrajectory>::SharedPtr joint_space_trajectory_service;
     rclcpp::Service<motion_planning_interfaces::srv::ObstacleManagement>::SharedPtr obstacle_service;
