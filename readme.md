@@ -48,7 +48,7 @@ ros2 launch motion_planning_moveit motion_planning_server.launch.py
 \
 Now you can plan trajectories in joint space, cartesian space and plan linear cartesian trajectory. Using this service you are also able to choose planner for your trajectory by selecting relevant id. List of planners below:  
 
-| ID | planner                  |
+| ID | Planner                  |
 |----|--------------------------|
 | 0  | SBLkConfigDefault        |
 | 1  | ESTkConfigDefault        |
@@ -65,18 +65,67 @@ Now you can plan trajectories in joint space, cartesian space and plan linear ca
 
 To plan trajectory you have call /joint_space_trajectory_service service using motion_planning_interfaces/srv/JointTrajectory interface.
 
-\*Structure of the message \*
+The structure of the interface:
+
+```
+float64[6] joints
+float64[7] pose
+uint8 type
+uint8 planner
+---
+bool executed
+```
 
 This interface allows you to select the space of the planned trajectory (joint space, cartesian space, linear cartesian trajectory) by selecting its ID, setting goal for manipulator:
   * in joint space user can set the configuration of every joint of manipulator (**in degrees**), 
-  * cartesian ...,  
-  * in linear cartesian ...,
+  * in both cartesian and linear cartesian user can set the cartesian position (x,y,z) and the orientation quaternion (w,x,y,z) of the destination position  
 
-\* example call \*
+While using the joint space you should enter the '*joints*' parameter, and when using cartesian space you should enter the '*pose*' parameter.
+The '*type*' and '*planner*' parameters are used in both cases.
+Type parameter is used to define which type of trajectory is used. Planner parameter is responsible for the planner selected by the user.
+Available trajectory types:
+
+| Type | Trajectory Type                 |
+|----|--------------------------|
+| 0  | Joints Space        |
+| 1  | Cartesian Space        |
+| 2  | Linear Cartesian Space   |
+
+\* joint space call\*
+```
+ros2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{joints: [60,40,0,0,0.0,0.0],type: 0, planner: 1}"
+```
+
+\* cartesian space call\*
+```
+ros2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{pose: [1,1,1,0,0,0,0.0],type: 1, planner: 1}"
+```
+
+\* linear cartesian space call \*
+```
+os2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{pose: [0.5,1,1,0.0,0.0,0.0,0.0],type: 2, planner: 0}"
+```
+
 
 The motion_planning_server also allows you to add and delete objects to be avoided by the manipulator.  
 
-To add object you need to make call to the /joint_space_trajectory_service using \* INSERT INTERFACE NAME  \*  
+To add object you need to make call to the /joint_space_trajectory_service using motion_planning_interfaces/srv/ObstacleManagement.
+
+To add new object to the planning scene user have to enter the '*box_position*' parameter that is the starting point in cartesian space (x,y,z) and the box_dimensions that is box size in each axis (x,y,z). You can also specify the '*box_id*' parameter, if not specified, the service assumes the next box number *x*, and the id is equal to '*box_**x***'. You need to enter the '*type*' (add) parameter, which defines the type of the operation.
+
+\* add object call \*
+```
+ros2 service call /obstacles_service motion_planning_interfaces/srv/ObstacleManagement "{box_position:[1,1,1], box_dimensions:[1,1,1], box_id: 'box_a',type: 'add'}"
+```
+
+\* delete object call \*
+```
+ros2 service call /obstacles_service motion_planning_interfaces/srv/ObstacleManagement "{box_id: 'box_a',type: 'remove'}"
+```
+
+To remove the object from the planning scene the only parameters you need to enter are '*type*' (remove) and '*box_id*' of the box you are going to remove.
+
+
 
 
 
