@@ -125,7 +125,6 @@ To add new object to the planning scene user have to enter the '*box_position*' 
 \* add object call \*
 ```
 ros2 service call /obstacles_service motion_planning_interfaces/srv/ObstacleManagement "{box_position:[0.5,0.3,0.5], box_dimensions:[0.3,0.3,0.3], box_id: 'box_a',type: 'add'}"
-
 ```
 
 \* delete object call \*
