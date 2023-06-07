@@ -21,7 +21,7 @@ git clone https://github.com/Krawus/motion_planning_moveit_ur.git
 \
 Download motion planning interfaces.  
 ```
-git clone git@github.com:Krawus/motion_planning_interfaces.git
+git clone https://github.com/Krawus/motion_planning_interfaces.git
 ```
 
 ## Usage  
@@ -143,5 +143,20 @@ To remove the object from the planning scene the only parameters you need to ent
 ### Planning trajectory in joint space
 
 <p align="center">
-    <img width="63%" src="https://i.imgur.com/MQ7DeJk.gif">
+    <img width="63%" src="https://i.imgur.com/Bx2Rfpg.gif">
+</p>
+
+### Planning trajectory in cartesian space
+<p align="center">
+    <img width="63%" src="https://i.imgur.com/q9cueKA.gif">
+</p>
+
+### Planning linear cartesian trajectory
+<p align="center">
+    <img width="63%" src="https://i.imgur.com/MB4ayzO.gif">
+</p>
+
+### Adding object and avoiding it, then deleting object
+<p align="center">
+    <img width="63%" src="https://i.imgur.com/SP25fZu.gif">
 </p>
