@@ -63,7 +63,7 @@ Now you can plan trajectories in joint space, cartesian space and plan linear ca
 | 10 | PRMstarkConfigDefault    |  
 
 
-To plan trajectory you have call /joint_space_trajectory_service service using motion_planning_interfaces/srv/JointTrajectory interface.
+To plan trajectory you have call /plan_trajectory_service service using motion_planning_interfaces/srv/PlanTrajectory interface.
 
 The structure of the interface:
 
@@ -93,29 +93,39 @@ Available trajectory types:
 
 \* joint space call\*
 ```
-ros2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{joints: [60,40,0,0,0.0,0.0],type: 0, planner: 1}"
+ros2 service call /plan_trajectory_service motion_planning_interfaces/srv/PlanTrajectory "{joints: [65,-40,35,20,-22,0.0],type: 0, planner: 1}"
 ```
 
 \* cartesian space call\*
 ```
-ros2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{pose: [1,1,1,0,0,0,0.0],type: 1, planner: 1}"
+ros2 service call /plan_trajectory_service motion_planning_interfaces/srv/PlanTrajectory "{pose: [1,1,1,0,0,0,0.0],type: 1, planner: 1}"
 ```
 
 \* linear cartesian space call \*
 ```
-os2 service call /joint_space_trajectory_service motion_planning_interfaces/srv/JointTrajectory "{pose: [0.5,1,1,0.0,0.0,0.0,0.0],type: 2, planner: 0}"
+ros2 service call /plan_trajectory_service motion_planning_interfaces/srv/PlanTrajectory "{pose: [0.5,1,1,0.0,0.0,0.0,0.0],type: 2, planner: 0}"
 ```
 
 
 The motion_planning_server also allows you to add and delete objects to be avoided by the manipulator.  
 
-To add object you need to make call to the /joint_space_trajectory_service using motion_planning_interfaces/srv/ObstacleManagement.
+To add object you need to make call to the /plan_trajectory_service using motion_planning_interfaces/srv/ObstacleManagement.
+
+```
+float64[3] box_position
+float64[3] box_dimensions
+string box_id
+string type
+---
+bool created
+```
 
 To add new object to the planning scene user have to enter the '*box_position*' parameter that is the starting point in cartesian space (x,y,z) and the box_dimensions that is box size in each axis (x,y,z). You can also specify the '*box_id*' parameter, if not specified, the service assumes the next box number *x*, and the id is equal to '*box_**x***'. You need to enter the '*type*' (add) parameter, which defines the type of the operation.
 
 \* add object call \*
 ```
-ros2 service call /obstacles_service motion_planning_interfaces/srv/ObstacleManagement "{box_position:[1,1,1], box_dimensions:[1,1,1], box_id: 'box_a',type: 'add'}"
+ros2 service call /obstacles_service motion_planning_interfaces/srv/ObstacleManagement "{box_position:[0.5,0.3,0.5], box_dimensions:[0.3,0.3,0.3], box_id: 'box_a',type: 'add'}"
+
 ```
 
 \* delete object call \*

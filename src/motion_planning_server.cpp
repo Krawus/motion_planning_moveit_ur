@@ -9,11 +9,11 @@
 #include <math.h>
 
 
-#include "motion_planning_interfaces/srv/joint_trajectory.hpp"
+#include "motion_planning_interfaces/srv/plan_trajectory.hpp"
 #include "motion_planning_interfaces/srv/obstacle_management.hpp"
 
 
-geometry_msgs::msg::Pose createPoseMsg(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request){
+geometry_msgs::msg::Pose createPoseMsg(const motion_planning_interfaces::srv::PlanTrajectory::Request::SharedPtr request){
     geometry_msgs::msg::Pose msg;
     // Point
     msg.position.x = request->pose[0];
@@ -78,8 +78,8 @@ public:
     MotionPlanningServer() : Node("motion_planning_server", rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)) 
     {
         using namespace std::placeholders;
-        this->joint_space_trajectory_service = this->create_service<motion_planning_interfaces::srv::JointTrajectory>
-        ("joint_space_trajectory_service", 
+        this->plan_trajectory_service = this->create_service<motion_planning_interfaces::srv::PlanTrajectory>
+        ("plan_trajectory_service", 
         std::bind(&MotionPlanningServer::jointSpaceTrajectoryExecute, this, _1, _2));
 
         this->obstacle_service = this->create_service<motion_planning_interfaces::srv::ObstacleManagement>
@@ -88,8 +88,8 @@ public:
 
     }
 
-    void jointSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request,
-                                    const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+    void jointSpaceTrajectoryExecute(const motion_planning_interfaces::srv::PlanTrajectory::Request::SharedPtr request,
+                                    const motion_planning_interfaces::srv::PlanTrajectory::Response::SharedPtr response){
 
         
         rclcpp::Logger logger = this->get_logger();
@@ -154,7 +154,7 @@ public:
         }                  
     
     }
-    void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response,bool isLinearTrajectory = false){
+    void cartesianSpaceTrajectoryExecute(const motion_planning_interfaces::srv::PlanTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::PlanTrajectory::Response::SharedPtr response,bool isLinearTrajectory = false){
         rclcpp::Logger logger = this->get_logger();
         auto moveGroupNode = rclcpp::Node::make_shared(isLinearTrajectory ? "cartesian_space_trajectory" : "cartesian_space_trajectory_linear");
 
@@ -200,7 +200,7 @@ public:
             executor.cancel();
         }
     }
-    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::JointTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::JointTrajectory::Response::SharedPtr response){
+    void trajectoryPlanningSelector(const motion_planning_interfaces::srv::PlanTrajectory::Request::SharedPtr request, const motion_planning_interfaces::srv::PlanTrajectory::Response::SharedPtr response){
         
         rclcpp::Logger logger = this->get_logger();
         RCLCPP_INFO(logger, "\n@@@@@@@ Trajectory Selector @@@@@@@\n");
@@ -318,7 +318,7 @@ public:
     }
 
 private:
-    rclcpp::Service<motion_planning_interfaces::srv::JointTrajectory>::SharedPtr joint_space_trajectory_service;
+    rclcpp::Service<motion_planning_interfaces::srv::PlanTrajectory>::SharedPtr plan_trajectory_service;
     rclcpp::Service<motion_planning_interfaces::srv::ObstacleManagement>::SharedPtr obstacle_service;
     int objectsCount = 0;
 
